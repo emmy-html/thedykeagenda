@@ -96,11 +96,29 @@ textarea {
 /* universal styles */ 
 @import "fonts";
 @import "colors";
-
 body {
     font-family: $body-font;
 }
-
+h1, h2, h3, h4, h5, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+.content-wrapper {
+    margin: 0px 20px;
+}
+/* header */ 
+header {
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+        ul {
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}
 h1.hero-logo-span {
     font-weight: 900;
 }
