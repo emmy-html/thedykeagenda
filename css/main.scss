@@ -122,6 +122,115 @@ header {
 h1.hero-logo-span {
     font-weight: 900;
 }
+/* hero */ 
+#hero {
+    padding: 20px 0px;
+    .hero-logo-span {
+        text-align: center;
+    }
+}
+/* blog */ 
+#main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .blog {
+       article.blog-single-post {
+           padding: 5px 0px;
+           h1 {
+               font-size: 1.25rem;
+               line-height: 1.2rem;
+               text-transform: lowercase;
+           }
+           h3 {
+               font-size: 1rem;
+               font-weight: $light;
+               text-transform: lowercase;
+               span {
+                   font-weight: $bold;
+               }
+           }
+           img {
+               padding: 10px 0px;
+           }
+           .photo-credit {
+               font-size: .75rem;
+               font-weight: $light-italic;
+               padding: 5px 0px;
+               text-transform: lowercase;
+           }
+           p {
+               padding: 5px 0px;
+           }
+        }
+    }
+    aside.sidebar {
+        .content-wrapper {
+            h2 {
+                padding: 10px 0px;
+                text-transform: lowercase;
+                text-align: center;
+            }
+            .sidebar-section {
+                padding: 10px 0px;
+            }
+            .sidebar-about {
+                h1.sidebar-logo-span {
+                    font-size: 1.5rem;
+                    line-height: 1.65rem;
+                    text-align: center;
+                    span {
+                        display: block;
+                        font-size: 1rem;
+                        font-weight: $light;
+                        line-height: 1.1rem;
+                    }
+                }
+            }
+            .sidebar-social-media {
+                padding: 5px 0px;
+                text-align: center;
+                i {
+                    padding-left: 5px;
+                }
+            }
+            .sidebar-latest-posts {
+                a:link,
+                a:visited {
+                    display: block;
+                }
+            }
+            .sidebar-search,
+            .sidebar-newsletter {
+                form {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    input[type="text"] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+footer {
+    padding: 20px 0px;
+    .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        h1.footer-logo-span {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+        .footer-social-media {
+            i {
+                padding-left: 5px;
+            }
+        }
+    }
+}
 
 /* ==========================================================================
    Helper classes

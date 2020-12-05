@@ -99,6 +99,82 @@ header .content-wrapper {
 h1.hero-logo-span {
   font-weight: 900; }
 
+/* hero */
+#hero {
+  padding: 20px 0px; }
+  #hero .hero-logo-span {
+    text-align: center; }
+
+/* blog */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  #main-content .blog article.blog-single-post {
+    padding: 5px 0px; }
+    #main-content .blog article.blog-single-post h1 {
+      font-size: 1.25rem;
+      line-height: 1.2rem;
+      text-transform: lowercase; }
+    #main-content .blog article.blog-single-post h3 {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: lowercase; }
+      #main-content .blog article.blog-single-post h3 span {
+        font-weight: 600; }
+    #main-content .blog article.blog-single-post img {
+      padding: 10px 0px; }
+    #main-content .blog article.blog-single-post .photo-credit {
+      font-size: .75rem;
+      font-weight: 300i;
+      padding: 5px 0px;
+      text-transform: lowercase; }
+    #main-content .blog article.blog-single-post p {
+      padding: 5px 0px; }
+  #main-content aside.sidebar .content-wrapper h2 {
+    padding: 10px 0px;
+    text-transform: lowercase;
+    text-align: center; }
+  #main-content aside.sidebar .content-wrapper .sidebar-section {
+    padding: 10px 0px; }
+  #main-content aside.sidebar .content-wrapper .sidebar-about h1.sidebar-logo-span {
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    text-align: center; }
+    #main-content aside.sidebar .content-wrapper .sidebar-about h1.sidebar-logo-span span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.1rem; }
+  #main-content aside.sidebar .content-wrapper .sidebar-social-media {
+    padding: 5px 0px;
+    text-align: center; }
+    #main-content aside.sidebar .content-wrapper .sidebar-social-media i {
+      padding-left: 5px; }
+  #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link,
+  #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited {
+    display: block; }
+  #main-content aside.sidebar .content-wrapper .sidebar-search form,
+  #main-content aside.sidebar .content-wrapper .sidebar-newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    #main-content aside.sidebar .content-wrapper .sidebar-search form input[type="text"],
+    #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="text"] {
+      width: 100%; }
+
+footer {
+  padding: 20px 0px; }
+  footer .content-wrapper {
+    display: flex;
+    justify-content: space-between; }
+    footer .content-wrapper h1.footer-logo-span {
+      font-size: 1rem;
+      line-height: 1rem; }
+    footer .content-wrapper .footer-social-media i {
+      padding-left: 5px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
