@@ -177,6 +177,7 @@ header .content-wrapper {
       font-size: .65rem;
       font-weight: 300i;
       padding: 5px 0px;
+      margin-bottom: 0px;
       text-transform: lowercase; }
     #main-content .blog article.blog-single-post p {
       padding: 5px 0px;
@@ -189,10 +190,24 @@ header .content-wrapper {
     margin: 0 auto;
     padding: 10px !important; }
   #main-content aside.sidebar .content-wrapper h2 {
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+    background-size: 200px 7px;
+    /* if linear-gradient, we need to resize it */
+    background-position: bottom center;
     color: #FF781F;
     padding: 10px 0px;
     text-transform: lowercase;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 15px; }
+  #main-content aside.sidebar .content-wrapper h3 {
+    font-weight: 300;
+    padding-bottom: 5px;
+    text-align: center;
+    text-transform: lowercase; }
+    #main-content aside.sidebar .content-wrapper h3 span {
+      display: block;
+      line-height: 1rem; }
   #main-content aside.sidebar .content-wrapper .sidebar-section {
     padding: 10px 0px; }
   #main-content aside.sidebar .content-wrapper .sidebar-about h1.sidebar-logo-span {
@@ -226,6 +241,11 @@ header .content-wrapper {
         #main-content aside.sidebar .content-wrapper .sidebar-about h1.sidebar-logo-span span a:visited:hover {
           color: #fff;
           transition: .3s color; }
+  #main-content aside.sidebar .content-wrapper .sidebar-the-agenda img {
+    width: 100%;
+    padding: 5px 0px; }
+  #main-content aside.sidebar .content-wrapper .sidebar-the-agenda .spotify-embed {
+    margin-top: 10px; }
   #main-content aside.sidebar .content-wrapper .sidebar-social-media {
     padding-top: 10px;
     text-align: center; }
@@ -269,7 +289,45 @@ header .content-wrapper {
     width: 100%; }
     #main-content aside.sidebar .content-wrapper .sidebar-search form input[type="text"],
     #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="text"] {
+      background: #C94090;
+      border: 3px solid #C94090;
+      padding: 5px;
       width: 100%; }
+    #main-content aside.sidebar .content-wrapper .sidebar-search form input::placeholder,
+    #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input::placeholder {
+      color: #3D0D00;
+      font-weight: 600; }
+    #main-content aside.sidebar .content-wrapper .sidebar-search form button[type="submit"],
+    #main-content aside.sidebar .content-wrapper .sidebar-newsletter form button[type="submit"] {
+      background: #FF781F;
+      border: 3px solid #FF781F;
+      padding: 5px; }
+      #main-content aside.sidebar .content-wrapper .sidebar-search form button[type="submit"] i,
+      #main-content aside.sidebar .content-wrapper .sidebar-newsletter form button[type="submit"] i {
+        color: #A30062; }
+      #main-content aside.sidebar .content-wrapper .sidebar-search form button[type="submit"]:hover,
+      #main-content aside.sidebar .content-wrapper .sidebar-newsletter form button[type="submit"]:hover {
+        background: #fff;
+        border: 3px solid #fff; }
+  #main-content aside.sidebar .content-wrapper .sidebar-newsletter form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; }
+    #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="submit"].newsletter-button {
+      width: 105.4%;
+      background: #FF781F;
+      border: 3px solid #FF781F;
+      color: #3D0D00;
+      font-weight: 600;
+      padding: 5px;
+      text-transform: lowercase; }
+      #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="submit"].newsletter-button:hover {
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: #fff;
+        transition: .5s background-color; }
 
 footer {
   padding: 20px 0px; }
@@ -341,6 +399,15 @@ footer {
     justify-content: space-between; }
     #main-content .blog {
       width: 70%; }
+      #main-content .blog article.blog-single-post img.no-image-crop {
+        width: 40%;
+        height: 400px;
+        object-fit: cover; }
+      #main-content .blog article.blog-single-post img {
+        display: flex;
+        width: 100%;
+        height: 400px;
+        margin: 0 auto !important; }
     #main-content .sidebar {
       width: 25%; }
 
