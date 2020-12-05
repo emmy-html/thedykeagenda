@@ -96,15 +96,25 @@ textarea {
 /* universal styles */ 
 @import "fonts";
 @import "colors";
+@import "mixins";
 body {
+    background: $light-brown;
+    color: #fff;
     font-family: $body-font;
 }
 h1, h2, h3, h4, h5, p, ul, li {
+    font-family: $heading-font;
     margin: 0;
     padding: 0;
 }
 .content-wrapper {
     margin: 0px 20px;
+}
+a:link,
+a:visited {
+    color: $dark-pink;
+    font-weight: $bold;
+    text-decoration: none;
 }
 /* header */ 
 header {
@@ -112,21 +122,40 @@ header {
         display: flex;
         justify-content: space-between;
         margin: 20px;
+        i {
+            color: $light-orange;
+            &:hover {
+                color: $light-pink;
+                transition: .3s color;
+            }
+        }
         ul {
             li {
                 list-style-type: none;
+                text-transform: lowercase;
+                a:link,
+                a:visited {
+                    color: #fff;
+                    &:hover {
+                        color: $light-pink;
+                        transition: .3s color;
+                    }
+                }
+            }
             }
         }
     }
-}
-h1.hero-logo-span {
-    font-weight: 900;
-}
 /* hero */ 
 #hero {
     padding: 20px 0px;
     .hero-logo-span {
+        @include dyke-gradient;
+        color: $light-orange;
+        font-weight: 900;
         text-align: center;
+        span {
+            color: $light-pink;
+        }
     }
 }
 /* blog */ 
@@ -138,35 +167,66 @@ h1.hero-logo-span {
        article.blog-single-post {
            padding: 5px 0px;
            h1 {
+               background: $light-pink;
+               color: $brown;
                font-size: 1.25rem;
                line-height: 1.2rem;
+               padding: 10px;
                text-transform: lowercase;
+               &:hover {
+                   background: $light-orange;
+                   cursor: pointer;
+                   transition: .3s background-color;
+               }
            }
-           h3 {
+           h3.blog-post-metadata {
+               color: $light-orange;
                font-size: 1rem;
                font-weight: $light;
+               padding: 10px;
                text-transform: lowercase;
                span {
-                   font-weight: $bold;
+                   color: #fff;
+                   border-bottom: 2px solid $light-pink;
                }
            }
            img {
                padding: 10px 0px;
+               width: 100%;
+               height: 200px;
+               object-fit: cover;
+           }
+           img.no-image-crop {
+               display: flex;
+               width: 240px;
+               height: 240px;
+               object-fit: cover;
+               margin: 0 auto;
            }
            .photo-credit {
-               font-size: .75rem;
+               font-size: .65rem;
                font-weight: $light-italic;
                padding: 5px 0px;
                text-transform: lowercase;
            }
            p {
                padding: 5px 0px;
+               line-height: 1.2rem;
+               margin-bottom: 10px;
+               text-align: justify;
            }
+        }
+        hr {
+            border-top: 2px solid $dark-pink;
+            width: 80%;
+            margin: 0 auto;
+            padding: 10px !important;
         }
     }
     aside.sidebar {
         .content-wrapper {
             h2 {
+                color: $light-orange;
                 padding: 10px 0px;
                 text-transform: lowercase;
                 text-align: center;
@@ -176,28 +236,66 @@ h1.hero-logo-span {
             }
             .sidebar-about {
                 h1.sidebar-logo-span {
+                    @include dyke-gradient;
+                    color: $light-orange;
                     font-size: 1.5rem;
                     line-height: 1.65rem;
                     text-align: center;
+                    span:nth-of-type(1) {
+                        color: $light-pink;
+                        font-weight: $bold;
+                        display: inline-block;
+                        font-size: 1.5rem !important;
+                        line-height: 1.65rem !important;
+                        text-align: center !important;
+                    }
                     span {
+                        color: #fff;
                         display: block;
                         font-size: 1rem;
                         font-weight: $light;
                         line-height: 1.1rem;
+                        a:link,
+                        a:visited {
+                            border-bottom: 2px solid $light-pink;
+                            color: $light-orange;
+                            &:hover {
+                                color: #fff;
+                                transition: .3s color;
+                            }
+                        }
                     }
                 }
             }
             .sidebar-social-media {
-                padding: 5px 0px;
+                padding-top: 10px;
                 text-align: center;
                 i {
+                    color: $light-pink;
                     padding-left: 5px;
+                    &:hover {
+                        color: $light-orange;
+                        transition: .3s color;
+                    }
                 }
             }
             .sidebar-latest-posts {
                 a:link,
                 a:visited {
+                    color: $brown;
                     display: block;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    &:nth-of-type(even) {
+                        background: $light-orange;
+                    }
+                    &:nth-of-type(odd) {
+                        background: $light-pink;
+                    }
+                    &:hover {
+                        background: #fff;
+                        transition: .5s background-color;
+                    }
                 }
             }
             .sidebar-search,
@@ -219,19 +317,99 @@ footer {
     padding: 20px 0px;
     .content-wrapper {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         h1.footer-logo-span {
+            @include dyke-gradient;
+            color: $light-orange;
             font-size: 1rem;
             line-height: 1rem;
+            text-align: center;
+            span:nth-of-type(1) {
+                color: $light-pink;
+            }
+            i {
+                color: $light-pink;
+            }
         }
         .footer-social-media {
+            margin-top: 10px;
+            text-align: center;
             i {
+                color: $light-pink;
                 padding-left: 5px;
+                &:hover {
+                    color: $light-orange;
+                    transition: .3s color;
+                }
             }
         }
     }
 }
-
+/* large screens */ 
+@media screen and (min-width: 768px) {
+    header {
+        .content-wrapper {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 15px;
+                    padding: 10px;
+                    &:nth-of-type(1) {
+                        background: $orange;
+                    }
+                    &:nth-of-type(2) {
+                        background: $light-pink;
+                    }
+                    &:nth-of-type(3) {
+                        background: $dark-pink;
+                    }
+                    &:hover {
+                        background: $light-orange;
+                        color: #fff !important;
+                        transition: .3s background-color;
+                    }
+                    a:link,
+                    a:visited {
+                        &:hover {
+                            color: #fff;
+                            transition: .3s color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        #hero {
+            padding: 30px 0px;
+            h1.hero-logo-span {
+                font-size: 3rem;
+                line-height: 4rem;
+            }
+        }
+    }
+    #main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .blog {
+            width: 70%;
+        }
+        .sidebar {
+            width: 25%;
+        }
+    }
+    footer {
+        .content-wrapper {
+            display: flex;
+            flex-direction: row;
+            .footer-logo-span {
+                background-position: center !important;
+            }
+        }
+    }
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
