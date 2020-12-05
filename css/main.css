@@ -142,15 +142,17 @@ header .content-wrapper {
     padding: 5px 0px; }
     #main-content .blog article.blog-single-post h1 {
       background: #C94090;
+      border-bottom: 3px solid #C94090;
       color: #3D0D00;
       font-size: 1.25rem;
       line-height: 1.2rem;
       padding: 10px;
       text-transform: lowercase; }
       #main-content .blog article.blog-single-post h1:hover {
-        background: #FF781F;
+        background: none;
+        color: #fff;
         cursor: pointer;
-        transition: .3s background-color; }
+        transition: .5s background-color; }
     #main-content .blog article.blog-single-post h3.blog-post-metadata {
       color: #FF781F;
       font-size: 1rem;
@@ -241,14 +243,24 @@ header .content-wrapper {
     padding: 10px; }
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link:nth-of-type(even),
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited:nth-of-type(even) {
-      background: #FF781F; }
+      background: #FF781F;
+      border-bottom: 3px solid #FF781F; }
+      #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link:nth-of-type(even):hover,
+      #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited:nth-of-type(even):hover {
+        background: none; }
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link:nth-of-type(odd),
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited:nth-of-type(odd) {
-      background: #C94090; }
+      background: #C94090;
+      border-bottom: 3px solid #C94090; }
+      #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link:nth-of-type(odd):hover,
+      #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited:nth-of-type(odd):hover {
+        background: none;
+        border-bottom: 3px solid #C94090; }
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:link:hover,
     #main-content aside.sidebar .content-wrapper .sidebar-latest-posts a:visited:hover {
-      background: #fff;
-      transition: .5s background-color; }
+      color: #fff;
+      transition: .5s background-color !important;
+      transition: .1s color; }
   #main-content aside.sidebar .content-wrapper .sidebar-search form,
   #main-content aside.sidebar .content-wrapper .sidebar-newsletter form {
     display: flex;
@@ -296,14 +308,21 @@ footer {
     margin-left: 15px;
     padding: 10px; }
     header .content-wrapper ul li:nth-of-type(1) {
-      background: #B82800; }
+      background: #B82800;
+      border-bottom: 3px solid #B82800; }
+      header .content-wrapper ul li:nth-of-type(1):hover {
+        background: none; }
     header .content-wrapper ul li:nth-of-type(2) {
-      background: #C94090; }
+      background: #C94090;
+      border-bottom: 3px solid #C94090; }
+      header .content-wrapper ul li:nth-of-type(2):hover {
+        background: none; }
     header .content-wrapper ul li:nth-of-type(3) {
-      background: #A30062; }
+      background: #A30062;
+      border-bottom: 3px solid #A30062; }
+      header .content-wrapper ul li:nth-of-type(3):hover {
+        background: none; }
     header .content-wrapper ul li:hover {
-      background: #FF781F;
-      color: #fff !important;
       transition: .3s background-color; }
     header .content-wrapper ul li a:link:hover,
     header .content-wrapper ul li a:visited:hover {

@@ -168,15 +168,17 @@ header {
            padding: 5px 0px;
            h1 {
                background: $light-pink;
+               border-bottom: 3px solid $light-pink;
                color: $brown;
                font-size: 1.25rem;
                line-height: 1.2rem;
                padding: 10px;
                text-transform: lowercase;
                &:hover {
-                   background: $light-orange;
+                   background: none;
+                   color: #fff;
                    cursor: pointer;
-                   transition: .3s background-color;
+                   transition: .5s background-color;
                }
            }
            h3.blog-post-metadata {
@@ -288,13 +290,23 @@ header {
                     padding: 10px;
                     &:nth-of-type(even) {
                         background: $light-orange;
+                        border-bottom: 3px solid $light-orange;
+                        &:hover {
+                            background: none;
+                        }
                     }
                     &:nth-of-type(odd) {
                         background: $light-pink;
+                        border-bottom: 3px solid $light-pink;
+                        &:hover {
+                            background: none;
+                            border-bottom: 3px solid $light-pink;
+                        }
                     }
                     &:hover {
-                        background: #fff;
-                        transition: .5s background-color;
+                        color: #fff;
+                        transition: .5s background-color !important;
+                        transition: .1s color;
                     }
                 }
             }
@@ -357,16 +369,26 @@ footer {
                     padding: 10px;
                     &:nth-of-type(1) {
                         background: $orange;
+                        border-bottom: 3px solid $orange;
+                        &:hover {
+                            background: none;
+                        }
                     }
                     &:nth-of-type(2) {
                         background: $light-pink;
+                        border-bottom: 3px solid $light-pink;
+                        &:hover {
+                            background: none;
+                        }
                     }
                     &:nth-of-type(3) {
                         background: $dark-pink;
+                        border-bottom: 3px solid $dark-pink;
+                        &:hover {
+                            background: none;
+                        }
                     }
                     &:hover {
-                        background: $light-orange;
-                        color: #fff !important;
                         transition: .3s background-color;
                     }
                     a:link,
