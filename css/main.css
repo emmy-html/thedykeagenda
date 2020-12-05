@@ -78,6 +78,12 @@ textarea {
   padding: 0.2em 0; }
 
 /* universal styles */
+body {
+  font-family: "Work Sans", sans-serif; }
+
+h1.hero-logo-span {
+  font-weight: 900; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

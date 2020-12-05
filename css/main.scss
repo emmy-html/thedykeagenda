@@ -97,6 +97,14 @@ textarea {
 @import "fonts";
 @import "colors";
 
+body {
+    font-family: $body-font;
+}
+
+h1.hero-logo-span {
+    font-weight: 900;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
