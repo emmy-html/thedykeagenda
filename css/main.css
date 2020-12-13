@@ -137,12 +137,25 @@ header .content-wrapper {
 #main-content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /* blog on the front page that shows the latest posts as preview blocks */
+  /* blog on the "blog" page that shows the latest posts in chronological order */ }
+  #main-content .blog.front-page {
+    display: flex;
+    flex-direction: column; }
+    #main-content .blog.front-page .blog-single-post-gradient-wrapper {
+      background: linear-gradient(to bottom, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+      padding: 10px;
+      margin-bottom: 20px; }
+    #main-content .blog.front-page article.blog-single-post {
+      background: #521200;
+      border-radius: 10px;
+      padding: 10px; }
   #main-content .blog article.blog-single-post {
     padding: 5px 0px; }
     #main-content .blog article.blog-single-post h1 {
-      background: #C94090;
-      border-bottom: 3px solid #C94090;
+      background: #FF781F;
+      border-bottom: 3px solid #FF781F;
       color: #3D0D00;
       font-size: 1.25rem;
       line-height: 1.2rem;
@@ -152,13 +165,13 @@ header .content-wrapper {
         background: none;
         color: #fff;
         cursor: pointer;
-        transition: .5s background-color; }
+        transition: .3s background-color; }
     #main-content .blog article.blog-single-post h3.blog-post-metadata {
       color: #FF781F;
-      font-size: 1rem;
-      font-weight: 300;
-      padding: 10px;
-      text-transform: lowercase; }
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 5px;
+      text-transform: uppercase; }
       #main-content .blog article.blog-single-post h3.blog-post-metadata span {
         color: #fff;
         border-bottom: 2px solid #C94090; }
@@ -395,8 +408,21 @@ footer {
 
   #main-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    /* blog on the front page that shows the latest posts as preview blocks */ }
+    #main-content .blog.front-page .content-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: flex-start; }
+      #main-content .blog.front-page .content-wrapper article.blog-single-post {
+        width: 250px;
+        min-height: 460px;
+        height: 470px; }
+        #main-content .blog.front-page .content-wrapper article.blog-single-post img {
+          width: 100%;
+          height: 150px; }
     #main-content .blog {
       width: 70%; }
       #main-content .blog article.blog-single-post img.no-image-crop {
