@@ -31,3 +31,12 @@
     $light-brown    
     no-repeat; 
 }
+@mixin page-header {
+    h1 {
+      border-bottom: 3px solid $light-orange;
+      color: $light-pink;
+      margin-bottom: 20px;
+      text-transform: lowercase;
+      text-align: center;
+  }
+}
