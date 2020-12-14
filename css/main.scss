@@ -419,6 +419,7 @@ header {
                         &:hover {
                             background: #fff;
                             border: 3px solid #fff;
+                            padding: 5px;
                         }
                     }
                 }
@@ -429,20 +430,19 @@ header {
                     flex-direction: column;
                     margin-top: 15px;
                     input[type="submit"].newsletter-button {
-                        width: 105.4%;
+                        width: 107%;
                         background: $light-orange;
-                        border: 3px solid $light-orange;
+                        border: none;
+                        border-bottom: 3px solid $light-orange;
                         color: $brown;
                         font-weight: $bold;
-                        padding: 5px;
                         text-transform: lowercase;
+                        padding: 5px;
                         &:hover {
                             background: none;
-                            border-top: none;
-                            border-left: none;
-                            border-right: none;
+                            border-bottom: 3px solid $light-orange;
                             color: #fff;
-                            transition: .5s background-color;
+                            transition: .3s background-color;
                         }
                     }
                 }

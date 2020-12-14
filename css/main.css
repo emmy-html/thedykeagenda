@@ -363,26 +363,26 @@ header .content-wrapper {
       #main-content aside.sidebar .content-wrapper .sidebar-search form button[type="submit"]:hover,
       #main-content aside.sidebar .content-wrapper .sidebar-newsletter form button[type="submit"]:hover {
         background: #fff;
-        border: 3px solid #fff; }
+        border: 3px solid #fff;
+        padding: 5px; }
   #main-content aside.sidebar .content-wrapper .sidebar-newsletter form {
     display: flex;
     flex-direction: column;
     margin-top: 15px; }
     #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="submit"].newsletter-button {
-      width: 105.4%;
+      width: 107%;
       background: #FF781F;
-      border: 3px solid #FF781F;
+      border: none;
+      border-bottom: 3px solid #FF781F;
       color: #3D0D00;
       font-weight: 600;
-      padding: 5px;
-      text-transform: lowercase; }
+      text-transform: lowercase;
+      padding: 5px; }
       #main-content aside.sidebar .content-wrapper .sidebar-newsletter form input[type="submit"].newsletter-button:hover {
         background: none;
-        border-top: none;
-        border-left: none;
-        border-right: none;
+        border-bottom: 3px solid #FF781F;
         color: #fff;
-        transition: .5s background-color; }
+        transition: .3s background-color; }
 
 footer {
   padding: 20px 0px; }
