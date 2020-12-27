@@ -110,9 +110,10 @@ h1, h2, h3, h4, h5, p, ul, li {
 .content-wrapper {
     margin: 0px 20px;
 }
+
 a:link,
 a:visited {
-    color: $dark-pink;
+    color: $light-pink;
     font-weight: $bold;
     text-decoration: none;
 }
@@ -129,6 +130,7 @@ header {
                 transition: .3s color;
             }
         }
+        /* navigation */ 
         ul {
             li {
                 list-style-type: none;
@@ -488,39 +490,35 @@ footer {
     header {
         .content-wrapper {
             ul {
-                li {
+                li:nth-of-type(even) {
                     display: inline-block;
-                    margin-left: 15px;
-                    padding: 10px;
-                    &:nth-of-type(1) {
-                        background: $orange;
-                        border-bottom: 3px solid $orange;
-                        &:hover {
-                            background: none;
-                        }
-                    }
-                    &:nth-of-type(2) {
-                        background: $light-pink;
-                        border-bottom: 3px solid $light-pink;
-                        &:hover {
-                            background: none;
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        background: $dark-pink;
-                        border-bottom: 3px solid $dark-pink;
-                        &:hover {
-                            background: none;
-                        }
-                    }
-                    &:hover {
-                        transition: .3s background-color;
-                    }
+                    margin-left: 20px;
                     a:link,
                     a:visited {
+                        background: $light-orange !important;
+                        border-bottom: 3px solid $light-orange;
+                        color: $brown;
+                        padding: 10px 20px 10px 20px;
                         &:hover {
+                            background: none !important;
                             color: #fff;
-                            transition: .3s color;
+                            transition: .3s background-color;
+                        }
+                    }
+                }
+                li:nth-of-type(odd) {
+                    display: inline-block;
+                    margin-left: 20px;
+                    a:link,
+                    a:visited {
+                        background: $light-pink;
+                        border-bottom: 3px solid $light-pink;
+                        color: $brown;
+                        padding: 10px 20px 10px 20px;
+                        &:hover {
+                            background: none !important;
+                            color: #fff;
+                            transition: .3s background-color;
                         }
                     }
                 }
