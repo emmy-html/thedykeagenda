@@ -184,26 +184,7 @@ header {
     .blog {
        article.blog-single-post {
            padding: 5px 0px;
-           h1 {
-               font-size: 1.25rem;
-               letter-spacing: .35px;
-               line-height: 1.5rem;
-               text-transform: lowercase;
-               margin-bottom: 20px;
-               a:link,
-               a:visited {
-                color: $brown;
-                background: $light-orange;
-                border-bottom: 3px solid $light-orange; 
-                padding: 10px;
-                &:hover {
-                    background: none;
-                    color: #fff;
-                    cursor: pointer;
-                    transition: .3s background-color;
-                }
-               }
-           }
+           @include blog-post-title;
            h3.blog-post-metadata {
                color: $light-pink;
                font-size: .75rem;
@@ -243,11 +224,7 @@ header {
            }
         }
         hr {
-            @include dyke-gradient;
-            border-top: none;
-            width: 80%;
-            margin: 0 auto;
-            height: 5px;
+            @include dyke-hr-gradient;
         }
     }
     /* blog single post page template */ 
@@ -258,6 +235,8 @@ header {
                 border-bottom: 3px solid $light-orange;
                 color: $brown;
                 cursor: default;
+                font-size: 1.5rem;
+                line-height: 1.75rem;
                 padding: 10px;
                 text-transform: none;
                 margin-bottom: 10px;

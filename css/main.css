@@ -155,24 +155,24 @@ header .content-wrapper {
       padding: 10px; }
   #main-content .blog article.blog-single-post {
     padding: 5px 0px; }
-    #main-content .blog article.blog-single-post h1 {
+    #main-content .blog article.blog-single-post h1 a:link,
+    #main-content .blog article.blog-single-post h1 a:visited {
+      display: block;
+      color: #3D0D00;
+      background: #FF781F;
+      border-bottom: 3px solid #FF781F;
+      padding: 10px;
       font-size: 1.25rem;
-      letter-spacing: .35px;
       line-height: 1.5rem;
+      letter-spacing: 0.35px;
       text-transform: lowercase;
-      margin-bottom: 20px; }
-      #main-content .blog article.blog-single-post h1 a:link,
-      #main-content .blog article.blog-single-post h1 a:visited {
-        color: #3D0D00;
-        background: #FF781F;
-        border-bottom: 3px solid #FF781F;
-        padding: 10px; }
-        #main-content .blog article.blog-single-post h1 a:link:hover,
-        #main-content .blog article.blog-single-post h1 a:visited:hover {
-          background: none;
-          color: #fff;
-          cursor: pointer;
-          transition: .3s background-color; }
+      margin-bottom: 5px; }
+      #main-content .blog article.blog-single-post h1 a:link:hover,
+      #main-content .blog article.blog-single-post h1 a:visited:hover {
+        background: none;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s background-color; }
     #main-content .blog article.blog-single-post h3.blog-post-metadata {
       color: #ff51b7;
       font-size: .75rem;
@@ -205,19 +205,24 @@ header .content-wrapper {
       margin-bottom: 10px;
       text-align: justify; }
   #main-content .blog hr {
-    padding-bottom: 10px;
-    background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
-    background-size: 200px 7px;
+    /* gradient settings */
+    background: linear-gradient(to left, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
+    background-size: 100% 7px;
     background-position: bottom center;
+    /* hr settings */
     border-top: none;
     width: 80%;
     margin: 0 auto;
-    height: 5px; }
+    height: 2px;
+    margin-bottom: 20px;
+    margin-top: 10px; }
   #main-content .blog.single-post-template .blog-single-post h1 {
     background: #FF781F;
     border-bottom: 3px solid #FF781F;
     color: #3D0D00;
     cursor: default;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     padding: 10px;
     text-transform: none;
     margin-bottom: 10px; }
