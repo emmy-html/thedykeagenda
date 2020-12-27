@@ -79,7 +79,7 @@ textarea {
 
 /* universal styles */
 body {
-  background: #521200;
+  background: #3D0D00;
   color: #fff;
   font-family: "Raleway", sans-serif; }
 
@@ -124,9 +124,8 @@ header .content-wrapper {
   padding: 20px 0px; }
   #hero .hero-logo-span {
     padding-bottom: 10px;
-    background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+    background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
     background-size: 200px 7px;
-    /* if linear-gradient, we need to resize it */
     background-position: bottom center;
     color: #FF781F;
     font-weight: 900;
@@ -141,42 +140,48 @@ header .content-wrapper {
   justify-content: space-between;
   /* blog on the front page that shows the latest posts as preview blocks */
   /* blog on the "blog" page that shows the latest posts in chronological order */
+  /* blog single post page template */
   /* about page */ }
   #main-content .blog.front-page {
     display: flex;
     flex-direction: column; }
     #main-content .blog.front-page .blog-single-post-gradient-wrapper {
-      background: linear-gradient(to bottom, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+      background: linear-gradient(to bottom, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
       padding: 10px;
       margin-bottom: 20px; }
     #main-content .blog.front-page article.blog-single-post {
-      background: #521200;
+      background: #3D0D00;
       border-radius: 10px;
       padding: 10px; }
   #main-content .blog article.blog-single-post {
     padding: 5px 0px; }
     #main-content .blog article.blog-single-post h1 {
-      background: #FF781F;
-      border-bottom: 3px solid #FF781F;
-      color: #3D0D00;
       font-size: 1.25rem;
-      line-height: 1.2rem;
-      padding: 10px;
-      text-transform: lowercase; }
-      #main-content .blog article.blog-single-post h1:hover {
-        background: none;
-        color: #fff;
-        cursor: pointer;
-        transition: .3s background-color; }
+      letter-spacing: .35px;
+      line-height: 1.5rem;
+      text-transform: lowercase;
+      margin-bottom: 20px; }
+      #main-content .blog article.blog-single-post h1 a:link,
+      #main-content .blog article.blog-single-post h1 a:visited {
+        color: #3D0D00;
+        background: #FF781F;
+        border-bottom: 3px solid #FF781F;
+        padding: 10px; }
+        #main-content .blog article.blog-single-post h1 a:link:hover,
+        #main-content .blog article.blog-single-post h1 a:visited:hover {
+          background: none;
+          color: #fff;
+          cursor: pointer;
+          transition: .3s background-color; }
     #main-content .blog article.blog-single-post h3.blog-post-metadata {
-      color: #FF781F;
+      color: #ff51b7;
       font-size: .75rem;
       font-weight: 600;
       padding: 5px;
       text-transform: uppercase; }
       #main-content .blog article.blog-single-post h3.blog-post-metadata span {
         color: #fff;
-        border-bottom: 2px solid #ff51b7; }
+        border-bottom: 2px solid #FF781F; }
     #main-content .blog article.blog-single-post img {
       padding: 10px 0px;
       width: 100%;
@@ -200,10 +205,22 @@ header .content-wrapper {
       margin-bottom: 10px;
       text-align: justify; }
   #main-content .blog hr {
-    border-top: 2px solid #A30062;
+    padding-bottom: 10px;
+    background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
+    background-size: 200px 7px;
+    background-position: bottom center;
+    border-top: none;
     width: 80%;
     margin: 0 auto;
-    padding: 10px !important; }
+    height: 5px; }
+  #main-content .blog.single-post-template .blog-single-post h1 {
+    background: #FF781F;
+    border-bottom: 3px solid #FF781F;
+    color: #3D0D00;
+    cursor: default;
+    padding: 10px;
+    text-transform: none;
+    margin-bottom: 10px; }
   #main-content .about-page h1 {
     border-bottom: 3px solid #FF781F;
     color: #ff51b7;
@@ -230,9 +247,8 @@ header .content-wrapper {
       padding: 10px 0px; }
     #main-content .about-page .about-page-content h2 {
       padding-bottom: 10px;
-      background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+      background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
       background-size: 200px 7px;
-      /* if linear-gradient, we need to resize it */
       background-position: bottom center;
       color: #FF781F;
       line-height: 1.75rem; }
@@ -247,9 +263,8 @@ header .content-wrapper {
       color: #ff51b7; }
   #main-content aside.sidebar .content-wrapper h2 {
     padding-bottom: 10px;
-    background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+    background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
     background-size: 200px 7px;
-    /* if linear-gradient, we need to resize it */
     background-position: bottom center;
     color: #FF781F;
     padding: 10px 0px;
@@ -268,9 +283,8 @@ header .content-wrapper {
     padding: 10px 0px; }
   #main-content aside.sidebar .content-wrapper .sidebar-about h1.sidebar-logo-span {
     padding-bottom: 10px;
-    background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+    background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
     background-size: 200px 7px;
-    /* if linear-gradient, we need to resize it */
     background-position: bottom center;
     color: #FF781F;
     font-size: 1.5rem;
@@ -393,9 +407,8 @@ footer {
     justify-content: space-between; }
     footer .content-wrapper h1.footer-logo-span {
       padding-bottom: 10px;
-      background: linear-gradient(to right, #3d0d00 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #521200 no-repeat;
+      background: linear-gradient(to right, #521200 0%, #b82800 22%, #ff781f 47%, #c94090 67%, #a30062 100%) left bottom #3D0D00 no-repeat;
       background-size: 200px 7px;
-      /* if linear-gradient, we need to resize it */
       background-position: bottom center;
       color: #FF781F;
       font-size: 1rem;
@@ -467,7 +480,7 @@ footer {
       #main-content .blog.front-page .content-wrapper article.blog-single-post {
         width: 250px;
         min-height: 460px;
-        height: 470px; }
+        height: 500px; }
         #main-content .blog.front-page .content-wrapper article.blog-single-post img {
           width: 100%;
           height: 150px; }

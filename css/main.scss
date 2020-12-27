@@ -98,7 +98,7 @@ textarea {
 @import "colors";
 @import "mixins";
 body {
-    background: $light-brown;
+    background: $brown;
     color: #fff;
     font-family: $body-font;
 }
@@ -175,7 +175,7 @@ header {
             margin-bottom: 20px;
         }
         article.blog-single-post {
-            background: $light-brown;
+            background: $brown;
             border-radius: 10px;
             padding: 10px;
         }
@@ -185,29 +185,34 @@ header {
        article.blog-single-post {
            padding: 5px 0px;
            h1 {
-               background: $light-orange;
-               border-bottom: 3px solid $light-orange;
-               color: $brown;
                font-size: 1.25rem;
-               line-height: 1.2rem;
-               padding: 10px;
+               letter-spacing: .35px;
+               line-height: 1.5rem;
                text-transform: lowercase;
-               &:hover {
-                   background: none;
-                   color: #fff;
-                   cursor: pointer;
-                   transition: .3s background-color;
+               margin-bottom: 20px;
+               a:link,
+               a:visited {
+                color: $brown;
+                background: $light-orange;
+                border-bottom: 3px solid $light-orange; 
+                padding: 10px;
+                &:hover {
+                    background: none;
+                    color: #fff;
+                    cursor: pointer;
+                    transition: .3s background-color;
+                }
                }
            }
            h3.blog-post-metadata {
-               color: $light-orange;
+               color: $light-pink;
                font-size: .75rem;
                font-weight: $bold;
                padding: 5px;
                text-transform: uppercase;
                span {
                    color: #fff;
-                   border-bottom: 2px solid $light-pink;
+                   border-bottom: 2px solid $light-orange;
                }
            }
            img {
@@ -238,10 +243,25 @@ header {
            }
         }
         hr {
-            border-top: 2px solid $dark-pink;
+            @include dyke-gradient;
+            border-top: none;
             width: 80%;
             margin: 0 auto;
-            padding: 10px !important;
+            height: 5px;
+        }
+    }
+    /* blog single post page template */ 
+    .blog.single-post-template {
+        .blog-single-post {
+            h1 {
+                background: $light-orange;
+                border-bottom: 3px solid $light-orange;
+                color: $brown;
+                cursor: default;
+                padding: 10px;
+                text-transform: none;
+                margin-bottom: 10px;
+            }
         }
     }
     /* about page */ 
@@ -548,7 +568,7 @@ footer {
                 article.blog-single-post {
                     width: 250px;
                     min-height: 460px;
-                    height: 470px;
+                    height: 500px;
                     img {
                         width: 100%;
                         height: 150px;
